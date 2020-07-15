@@ -24,7 +24,7 @@ If you find this repo helpful, please cite the following:
 
 In this paper, we improve the existing MRCbased entity-relation extraction model through diverse question answering. First, a diversity question answering mechanism is introduced to detect entity spans and two answering selection strategies are designed to integrate different answers. Then, we propose to predict a subset of potential relations and filter out irrelevant ones to generate questions effectively. Finally, entity and relation extractions are integrated in an end-to-end way and optimized through joint learning.<br> 
 
-![Aaron Swartz](https://raw.githubusercontent.com/smshen/MarkdownPhotos/master/Res/test.jpg)
+![Aaron Swartz](https://github.com/TanyaZhao/MRC4ERE_plus/raw/master/model_framework.png)
 
 For example, 
 
