@@ -42,7 +42,7 @@ when extracting a person entity, we can construct diverse question as follows:
 
 ## Experimental Results
 
-We evaluate the proposed method on two widely-used datasets for entity relation extaction: ACE05 and [CoNLL04](https://github.com/bekou/multihead_joint_entity_relation_extraction/tree/master/data/CoNLL04).
+We evaluate the proposed method on two widely-used datasets for entity relation extaction: ACE05 and CoNLL04.
 Micro precision, recall and F1-score are used as evaluation metrics. 
   
 - Results on **ACE 2005**:
@@ -64,7 +64,11 @@ Micro precision, recall and F1-score are used as evaluation metrics.
 
 ## Data Preparation
 
+We take the CoNLL04 dataset as an example:
+* We have processed the [original data](https://github.com/bekou/multihead_joint_entity_relation_extraction/tree/master/data/CoNLL04) into the MRC-based formation, as listed in the directory ```datasets/conll04/mrc4ere```.
 
+To use the pretrained language model BERT:
+* Download [BERT-Base-Cased, English](https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz) pretrained model and unzip it into the directory ```pretrained_bert/bert-base-cased/```. In this way, we can load the BERT from local working directory.
     
 ## Dependencies 
 
@@ -74,10 +78,12 @@ python >= 3.6
 PyTorch == 1.1.0
 pytorch-pretrained-bert == 0.6.1 
 ```
-* Download [BERT-Base-UnCased, English](https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz) pretrained model and unzip. 
-    
 
 
 ## Usage
 As an example, the following command trains the proposed mothod on CoNLL04. 
+```bash 
+cd run
+python run_tagger.py 
+```
 
