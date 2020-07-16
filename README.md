@@ -26,12 +26,16 @@ In this paper, we improve the existing MRCbased entity-relation extraction model
 
 ![Aaron Swartz](https://github.com/TanyaZhao/MRC4ERE_plus/raw/master/model_framework.png)
 
-For example, 
-
-when extracting a person entity, we can construct diverse question as follows:
+For example, when extracting a person entity, we can construct diverse questions as follows:
 - Who is mentioned in the context?
 - Find people mentioned in the context?
 - Which words are person entities?
+
+After extracted the head entities, we generate diverse questions to identify tail entities by querying about protential relations.
+For example, given the person ```Paul Vercammen``` and the relation ```Lived_In```, questions can be constructed as:
+- Find locations which Paul Vercammen is lived in ?
+- Where does Paul Vercammen live ?
+- Where is Paul Vercammen's home ?
 
 
 ## Contents
