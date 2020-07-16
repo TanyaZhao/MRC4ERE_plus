@@ -50,7 +50,7 @@ Micro precision, recall and F1-score are used as evaluation metrics.
   | *Models* | Enity P | Entity R | Entity F | Relation P | Relation R | Relation F|
   | --- | --- | --- | --- | --- | --- | --- |
   |Sun et al. (2018) |83.9 s|83.2| 83.6| 64.9| 55.1| 59.6|
-  |Li et al. (2019) |84.7 |84.9|**84.8** |64.8| 56.2| **60.2 **|
+  |Li et al. (2019) |84.7 |84.9| 84.8 |64.8| 56.2| 60.2 |
   |MRC4ERE++ |85.9 |85.2 |**85.5** |62.0| 62.2| **62.1 (+1.9)**|
   
 - Results on **CoNLL 2004**:
@@ -58,7 +58,7 @@ Micro precision, recall and F1-score are used as evaluation metrics.
   | *Models* | Enity P | Entity R | Entity F | Relation P | Relation R | Relation F|
   | --- | --- | --- | --- | --- | --- | --- |
   |Zhang et al. (2017) |– |–| 85.6 |– |–| 67.8|
-  |Li et al. (2019) | 89.0 | 86.6 | **87.8** | 69.2 | 68.2 | **68.9 **|
+  |Li et al. (2019) | 89.0 | 86.6 | 87.8 | 69.2 | 68.2 | 68.9 |
   |MRC4ERE++ |89.3 |88.5|**88.9** |72.2| 71.5| **71.9 (+3.0)**|
 
 
