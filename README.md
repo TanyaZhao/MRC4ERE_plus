@@ -1,5 +1,5 @@
 # MRC4ERE++
-The repository contains the code for Paper "Asking Effective and Diverse Questions: A Machine Reading Comprehension based Framework for Joint Entity-Relation Extraction", Accepted by [IJCAI 2020](https://www.ijcai.org/Proceedings/2020/0546.pdf). <br>
+The repository contains the code for Paper "Asking Effective and Diverse Questions: A Machine Reading Comprehension based Framework for Joint Entity-Relation Extraction", Accepted by IJCAI 2020 (https://www.ijcai.org/Proceedings/2020/0546.pdf). <br>
 
 If you find this repo helpful, please cite the following:
 ```text
