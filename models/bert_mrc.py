@@ -67,9 +67,7 @@ class BertTagger(nn.Module):
                     valid_output[i][jj] = sequence_output[i][j]
 
         last_bert_layer = self.dropout(valid_output)
-
-        # last_bert_layer = self.answer_selection(last_bert_layer, num_ques=self.num_ques)
-
+        
         logits = self.classifier(last_bert_layer) # batch*3, max_seq_len, n_class
 
         if labels is not None:
@@ -87,36 +85,3 @@ class BertTagger(nn.Module):
         else:
             logits = F.log_softmax(logits, dim=2) # batch, max_seq_len, n_class
             return logits
-
-
-    def answer_selection(self, logits, num_ques):
-        '''
-
-        :param logits: batch*3, max_seq_len, hidden
-        :return:
-        '''
-        batch_size, max_len, feat_dim = logits.size()
-        logits = logits.view(-1, num_ques, max_len, feat_dim)
-        logits = logits.permute(1, 0, 2, 3) # 3, batch, max_len, hidden
-        answer1 = logits[0] # batch, max_len, hidden
-        answer2 = logits[1]
-        answer3 = logits[2]
-        concat_answer = torch.cat([answer1, answer2, answer3])
-
-        w1 = F.sigmoid(self.relation1(concat_answer)) # batch, max_len, hidden
-        w2 = F.sigmoid(self.relation2(concat_answer))
-        w3 = F.sigmoid(self.relation3(concat_answer))
-
-        answer = (answer1*w1 + answer2*w2 + answer3*w3) / 3
-
-        return answer
-
-
-
-
-
-
-
-
-
-
